@@ -1,0 +1,14 @@
+inherit gnome2
+
+
+PATCH_URI="3.4.1-no-undefined.patch"
+
+PKG_NAMES="libcryptui0 libcryptui-common libcryptui-devel girepository-CryptUI0.0 seahorse-daemon"
+libcryptui0_CONTENTS="usr/bin/cygcryptui-0.dll"
+libcryptui_common_CONTENTS="etc/ usr/share/cryptui/ usr/share/doc/ usr/share/GConf/
+                            usr/share/glib-2.0/ usr/share/locale/ usr/share/pixmaps/"
+libcryptui_devel_CONTENTS="usr/include/ usr/lib/lib* usr/lib/pkgconfig/ usr/share/gtk-doc/"
+girepository_CryptUI0_0_CONTENTS="usr/*/gir*/CryptUI-0.0.*"
+seahorse_daemon_CONTENTS="usr/bin/seahorse-daemon.exe usr/share/dbus-1/ usr/share/man/"
+
+KEEP_LA_FILES="none"
