@@ -1,5 +1,14 @@
 inherit gnome2
 
+NAME="libcryptui"
+VERSION=3.6.0
+RELEASE=1
+CATEGORY="GNOME"
+SUMMARY="GTK+ GPG/SSH key selection widget library"
+DESCRIPTION="Seahorse is a graphical interface for managing and using
+encryption keys. Currently it supports PGP keys (using GPG/GPGME) and
+SSH keys. Its goal is to provide an easy to use Key Management Tool,
+along with an easy to use interface for encryption operations."
 
 PATCH_URI="3.4.1-no-undefined.patch"
 
@@ -10,5 +19,3 @@ libcryptui_common_CONTENTS="etc/ usr/share/cryptui/ usr/share/doc/ usr/share/GCo
 libcryptui_devel_CONTENTS="usr/include/ usr/lib/lib* usr/lib/pkgconfig/ usr/share/gtk-doc/"
 girepository_CryptUI0_0_CONTENTS="usr/*/gir*/CryptUI-0.0.*"
 seahorse_daemon_CONTENTS="usr/bin/seahorse-daemon.exe usr/share/dbus-1/ usr/share/man/"
-
-KEEP_LA_FILES="none"
