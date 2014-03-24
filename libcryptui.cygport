@@ -1,7 +1,7 @@
 inherit gnome2
 
 NAME="libcryptui"
-VERSION=3.8.0
+VERSION=3.10.1
 RELEASE=1
 CATEGORY="Libs"
 SUMMARY="GTK+ GPG/SSH key selection widget library"
@@ -12,11 +12,13 @@ along with an easy to use interface for encryption operations."
 
 PATCH_URI="3.4.1-no-undefined.patch"
 
-PKG_NAMES="libcryptui0 libcryptui-common libcryptui-devel girepository-CryptUI0.0 seahorse-daemon"
+PKG_NAMES="${NAME}0 ${NAME}-common ${NAME}-devel ${NAME}-doc girepository-CryptUI0.0 seahorse-daemon"
 libcryptui0_CONTENTS="usr/bin/cygcryptui-0.dll"
 libcryptui_common_CONTENTS="etc/ usr/share/cryptui/ usr/share/doc/ usr/share/GConf/
                             usr/share/glib-2.0/ usr/share/locale/ usr/share/pixmaps/"
-libcryptui_devel_CONTENTS="usr/include/ usr/lib/lib* usr/lib/pkgconfig/ usr/share/gtk-doc/"
+libcryptui_devel_CONTENTS="usr/include/ usr/lib/lib* usr/lib/pkgconfig/"
+libcryptui_doc_CATEGORY="Doc"
+libcryptui_doc_CONTENTS="usr/share/gtk-doc/"
 girepository_CryptUI0_0_CONTENTS="usr/*/gir*/CryptUI-0.0.*"
 seahorse_daemon_CATEGORY="GNOME"
 seahorse_daemon_SUMMARY="GNOME passphrase caching agent"
